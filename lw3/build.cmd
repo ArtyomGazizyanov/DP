@@ -11,8 +11,8 @@ rem Change colon+space by equal-sign
 set "string=%string:: ==%"
 rem Separate parts at comma into individual assignments
 set "%string:, =" & set "%"
-                     
-SET _toBuildPathName= "%project_name%-%1"
+
+SET _toBuildPathName= "SuperProject-%1"
 SET _toBuildPathName=%_toBuildPathName:"=%
 SET _toBuildPathName=%_toBuildPathName: =%
 
@@ -26,6 +26,9 @@ dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathN
 
 cd ../Frontend
 dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathName%/Frontend" /property:PublishWithAspNetCoreTargetManifest=false
+
+cd ../TextListener
+dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathName%/TextListener" /property:PublishWithAspNetCoreTargetManifest=false
 
 cd ../
 copy run.cmd "../%_toBuildPathName%"

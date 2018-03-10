@@ -1,1 +1,1 @@
-{ "project_name": "SuperName", "build_mode": "Release", "launch_profile": "Production" }
+{ "project_name": "SuperName", "build_mode": "Release", "launch_profile": "Development" }
