@@ -1,0 +1,10 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Statistics";
+}
+<div>
+    <h2>@Model</h2>    
+    <h3>Средняя оценка: @TempData["avgRank"]</h3>    
+    <h3>Количество текстов с высокой оценкой (выше 0.5):@TempData["highRankPart"]</h3>    
+    <h3>Общее количество всех обработанных текстов: @TempData["textNum"]</h3>    
+</div>

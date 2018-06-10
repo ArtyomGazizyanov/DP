@@ -20,3 +20,6 @@ start dotnet Frontend.dll --configuration Release --launch-profile Production
                                                         
 cd ../TextRankCalc
 start dotnet TextRankCalc.dll --configuration Release --launch-profile Production
+
+cd ../TextListener
+start dotnet TextListener.dll --configuration Release --launch-profile Production

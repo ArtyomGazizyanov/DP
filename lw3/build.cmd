@@ -30,6 +30,13 @@ dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathN
 cd ../TextListener
 dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathName%/TextListener" /property:PublishWithAspNetCoreTargetManifest=false
 
+cd ../RabbitMq
+dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathName%/RabbitMq" /property:PublishWithAspNetCoreTargetManifest=false
+
+cd ../Redis
+dotnet publish --configuration Release -f netcoreapp2.0 -o "../../%_toBuildPathName%/Redis" /property:PublishWithAspNetCoreTargetManifest=false
+
+
 cd ../
 copy run.cmd "../%_toBuildPathName%"
 copy stop.cmd "../%_toBuildPathName%"

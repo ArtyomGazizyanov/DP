@@ -1,0 +1,22 @@
+{
+	"NODE1": {
+		"ManagerPort": 49300,
+		"NodeConnectionPort": 49200
+	},
+	"NODE2": {
+		"ManagerPort": 49301,
+		"NodeConnectionPort": 49201
+	},
+	"NODE3": {
+		"ManagerPort": 49302,
+		"NodeConnectionPort": 49202
+	},
+	"NODE4": {
+		"ManagerPort": 49303,
+		"NodeConnectionPort": 49203
+	},
+	"NODE5": {
+		"ManagerPort": 49304,
+		"NodeConnectionPort": 49204
+	}
+}

@@ -57,16 +57,18 @@ namespace Backend.Controllers
             {
                 using(var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "backend-api",
+                    channel.exchange_declare(exchange="backend-api",
+                         exchange_type='fanout')
+                    /*channel.QueueDeclare(queue: "backend-api",
                                         durable: false,
                                         exclusive: false,
                                         autoDelete: false,
-                                        arguments: null);
+                                        arguments: null);*/
 
                     var body = Encoding.UTF8.GetBytes(message);
 
-                    channel.BasicPublish(exchange: "",
-                                        routingKey: "backend-api",
+                    channel.BasicPublish(exchange: "backend-api",
+                                        routingKey: "",
                                         basicProperties: null,
                                         body: body);
 

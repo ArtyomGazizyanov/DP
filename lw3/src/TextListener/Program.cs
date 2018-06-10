@@ -25,7 +25,8 @@ namespace TextListener
                     redisValue = redisDb.StringGet(message);
                                             
                     Console.WriteLine(" [x] Received from redis {0} with key: {1}", redisValue, message);    
-                };                    
+                };
+
                 RabbitMQHelper.ConsumeQueue("backend-api", consumer, channel);
 
                 Console.WriteLine(" Press [enter] to exit.");                
